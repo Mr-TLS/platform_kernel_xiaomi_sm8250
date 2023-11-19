@@ -8264,6 +8264,7 @@ static int fts_probe(struct spi_device *client)
 #endif
 
 #ifdef CONFIG_TOUCHSCREEN_COMMON
+	int ret;
 	ret = tp_common_set_fod_status_ops(&fod_status_ops);
 	if (ret < 0)
 		MI_TOUCH_LOGE(1, "%s %s: Failed to create fod_status node err=%d\n",
